@@ -1,13 +1,4 @@
-/* VARS */
-
-:root {
-  --white-color: #ececec;
-  --white-color-hover: #ffffff;
-  --black-color: #3c3c3c;
-  --black-color-hover: #4d4d4d;
-}
-
-/* RESET */
+@import url("https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&display=swap");
 
 * {
   padding: 0;
@@ -20,7 +11,26 @@
   outline: none;
 }
 
+body {
+  font-family: "Gloria Hallelujah", cursive;
+  -webkit-font-smoothing: antialiased;
+  color: #333;
+  line-height: 1, 6;
+  background-color: whitesmoke;
+}
+
 /* UTILS */
+
+:root {
+  --white-color: #ececec;
+  --white-color-hover: #ffffff;
+  --black-color: #3c3c3c;
+  --black-color-hover: #4d4d4d;
+}
+
+.debug {
+  border: 3px solid var(--black-color);
+}
 
 .flex {
   display: flex;
@@ -34,6 +44,18 @@
 .App {
   height: 100vh;
   width: 100vw;
+}
+
+/* PANEL */
+
+.info-panel {
+  height: 10vh;
+  width: 10vw;
+  margin-left: 5vw;
+
+  font-size: 10vh;
+  line-height: 10vh;
+  font-weight: 900;
 }
 
 /* BOARD */
@@ -96,4 +118,16 @@
 .square:nth-child(48) ~ .square:nth-child(-2n + 56):hover,
 .square:nth-child(56) ~ .square:nth-child(-2n + 63):hover {
   background-color: var(--black-color-hover);
+}
+
+.file {
+  color: var(--black-color);
+  position: relative;
+  left: -75px;
+}
+
+.rank {
+  color: var(--black-color);
+  position: relative;
+  bottom: -75px;
 }
